@@ -10,7 +10,7 @@ COPY conf /etc/clamav
 COPY bootstrap.py /bootstrap.py
 COPY check.sh /check.sh
 
-RUN chmod +x /check.sh && freshclam
+RUN chmod +x /check.sh & mkdir /store & freshclam
 
 EXPOSE 3310/tcp
 VOLUME ["/store"]
