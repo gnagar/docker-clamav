@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  dtrax-placeholder:
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile
+    image: ${REGISTRY_URL:-gauravnagar/scanner}:${BUILD_TAG:-alpine}
+  
